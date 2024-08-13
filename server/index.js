@@ -17,6 +17,9 @@ app.use(
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
     optionsSuccessStatus: 200,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0,
   })
 );
 app.use(express.json());
